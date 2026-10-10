@@ -1,16 +1,16 @@
-function removeVowels(word){
+function replaceVowelsWithX(input) {
+  
+    let result = "";
 
-
-    for(let ch of word.split("").toLowerCase()){
-
-        if("aeiou".includes(ch)){
-
-            word= word.replace(ch, "x");
-        }
+  for (let ch of input) {
+    if ("aeiou".includes(ch.toLowerCase())) {
+      result += "X";
+    } else {
+      result += ch;
     }
-     return word;
+  }
+
+  return result;
 }
 
-let word = 'Automation';
-
-console.log(removeVowels(word));
+console.log(replaceVowelsWithX("Automation"));
